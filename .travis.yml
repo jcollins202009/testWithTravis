@@ -5,3 +5,13 @@ services:
 scripts:
   - docker build -t jasoncollins/node .
   - docker images jasoncollins/node
+
+before_deploy:
+  - docker login -u jasoncollins -p 7STPjDmhgxghse7alDbB
+
+deploy:
+  provider: script
+  script: docker push jasoncollins/node
+  on:
+    branch: main
+
