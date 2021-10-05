@@ -7,7 +7,7 @@ scripts:
   - docker images jasoncollins/node
 
 before_deploy:
-  - docker login -u jasoncollins -p 7STPjDmhgxghse7alDbB
+  - docker login -u <username> -p <password>
 
 deploy:
   provider: script
